@@ -1,8 +1,6 @@
 import random
 import time
 import os
-def clear_output():
-    print("\033[F\033[J", end='', flush=True)
 def zombie_survival_game():
     userName = input("Enter your name:")
     print(f"Hello, {userName}, welcome to Zombie survival game!")

@@ -1,4 +1,8 @@
 import random
+import time
+import os
+def clear_output():
+    print("\033[F\033[J", end='', flush=True)
 def zombie_survival_game():
     userName = input("Enter your name:")
     print(f"Hello, {userName}, welcome to Zombie survival game!")
@@ -6,11 +10,13 @@ def zombie_survival_game():
     attempts = 0
     press = input("press 'y' to start game or press 'q' to quite a game.")
     if press == "y":
+         time.sleep(2)
+         os.system('clear')
          while True:
               print("Which direction should the zombie move?")
-              print("1. Straight (fall into a pothole and die.)")
-              print("2. Right (enter a jungle and get lost)")
-              print("3. Left (find a human or fight with enemy and find a human and win the game)")
+              print("Straight (fall into a pothole and die.)")
+              print("Right (enter a jungle and get lost)")
+              print("Left (find a human or fight with enemy and find a human and win the game)")
       
               direction = input("Enter 1, 2, or 3 to choose the direction or 'q' to quit")
               if direction == 'q':
@@ -42,7 +48,9 @@ def zombie_survival_game():
               if direction == 1 or direction == 2:
                   x  = input('Want to try again? press "y" or "q" to quite')
                   if x == 'y':
-                       continue
+                   time.sleep(2)
+                   os.system('clear')
+                   continue
                   elif x == 'q':
                        print("Exiting the game...")
                        break

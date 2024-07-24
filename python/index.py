@@ -61,6 +61,8 @@ def zombie_survival_game():
                    continue
                   elif x == 'q':
                        print("Exiting the game...")
+                       time.sleep(2)
+                       os.system('clear')
                        break
     elif press == "q":
          print("Exiting the game...")

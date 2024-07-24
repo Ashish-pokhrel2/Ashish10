@@ -60,7 +60,7 @@ def zombie_survival_game():
                         print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
                         
               if direction == 1 or direction == 2 or direction == 'die' or direction == 'human' or direction == 'kill':
-                  time.sleep(2)
+                  time.sleep(4)
                   os.system('clear')
                   x  = input('Want to try again? press "y"  to continue... or "q" to quite')
                   if x == 'y':

@@ -2,6 +2,9 @@ import random
 import time
 import os
 def zombie_survival_game():
+    print("Loading........")
+    time.sleep(2)
+    os.system('clear')
     userName = input("Enter your name:")
     print(f"Hello, {userName}, welcome to Zombie survival game!")
     print("A zombie is walking straight on a road...")
@@ -12,8 +15,8 @@ def zombie_survival_game():
          os.system('clear')
          while True:
               print("Which direction should the zombie move?")
-              print("Straight (fall into a pothole and die.)")
               print("Right (enter a jungle and get lost)")
+              print("Straight (fall into a pothole and die.)")
               print("Left (find a human or fight with enemy and find a human and win the game)")
       
               direction = input("Enter 1, 2, or 3 to choose the direction or 'q' to quit")
@@ -35,15 +38,20 @@ def zombie_survival_game():
               elif direction == 3:
                   direction = random.choice(['enemy', 'human'])
                   if(direction == 'enemy'):
-                       print("Zombie find enemy.")
-                       print("zombie defect enemy, find a human and win a game")
-                       print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
-                       break
-                  elif direction == 'human':
+                       direction = random.choice(['die','kill'])
+                       if(direction == 'kill'):
+                            print("Zombie find enemy.")
+                            print("zombie defect enemy, find a human and win a game")
+                            print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
+                            break
+                       elif(direction == 'die'):
+                         print("Enemy kill the zombie... GAME OVER! ")
+
+              elif direction == 'human':
                        print("The zombie moves left and finds a human!")
                        print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
                        break
-              if direction == 1 or direction == 2:
+              if direction == 1 or direction == 2 or direction == 'die':
                   x  = input('Want to try again? press "y" or "q" to quite')
                   if x == 'y':
                    time.sleep(2)

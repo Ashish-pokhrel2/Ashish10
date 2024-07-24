@@ -5,6 +5,9 @@ def zombie_survival_game():
     print("Loading........")
     time.sleep(2)
     os.system('clear')
+    print("Zombie survival game...")
+    time.sleep(2)
+    os.system('clear')
     userName = input("Enter your name:")
     print(f"Hello, {userName}, welcome to Zombie survival game!")
     print("A zombie is walking straight on a road...")
@@ -38,10 +41,14 @@ def zombie_survival_game():
               elif direction == 3:
                   direction = random.choice(['enemy', 'human'])
                   if(direction == 'enemy'):
+                       print("Zombie find enemy..")
+                       time.sleep(2)
+                       os.system('clear')
+                       print("Zombie is fighting with enemy...")
+                       time.sleep(2)
                        direction = random.choice(['die','kill'])
                        if(direction == 'kill'):
-                            print("Zombie find enemy.")
-                            print("zombie defect enemy, find a human and win a game")
+                            print("zombie defect enemy and  find a human")
                             print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
                             
                        elif(direction == 'die'):

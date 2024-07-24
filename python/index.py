@@ -43,16 +43,18 @@ def zombie_survival_game():
                             print("Zombie find enemy.")
                             print("zombie defect enemy, find a human and win a game")
                             print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
-                            break
+                            
                        elif(direction == 'die'):
                          print("Enemy kill the zombie... GAME OVER! ")
 
-              elif direction == 'human':
-                       print("The zombie moves left and finds a human!")
-                       print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
-                       break
-              if direction == 1 or direction == 2 or direction == 'die':
-                  x  = input('Want to try again? press "y" or "q" to quite')
+                  elif direction == 'human':
+                        print("The zombie moves left and finds a human!")
+                        print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
+                        
+              if direction == 1 or direction == 2 or direction == 'die' or direction == 'human' or direction == 'kill':
+                  time.sleep(2)
+                  os.system('clear')
+                  x  = input('Want to try again? press "y"  to continue... or "q" to quite')
                   if x == 'y':
                    time.sleep(2)
                    os.system('clear')

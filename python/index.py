@@ -44,14 +44,15 @@ def zombie_survival_game():
                        print("Zombie find enemy..")
                        time.sleep(2)
                        os.system('clear')
-                       print("Zombie is fighting with enemy...")
                        time.sleep(2)
                        direction = random.choice(['die','kill'])
                        if(direction == 'kill'):
+                            print("Zombie is fighting with enemy...")
                             print("zombie defect enemy and  find a human")
                             print(f"Congratulations! The zombie has won the game in {attempts} attempts.")
                             
                        elif(direction == 'die'):
+                         print("Zombie is fighting with enemy...")
                          print("Enemy kill the zombie... GAME OVER! ")
 
                   elif direction == 'human':
